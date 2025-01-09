@@ -1,16 +1,21 @@
 import React from 'react';
 import { View, Text, StyleSheet, ImageBackground, Image, TouchableOpacity } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import {useNavigation} from '@react-navigation/native';
+
 
 const Home = () => {
+    const navigation = useNavigation();
     return (
         <View style={styles.container}>
             <ImageBackground
             style={styles.img}
-            source={require('../../images/logo.png')}
+            source={require('../../../images/logo.png')}
             />
-            <TouchableOpacity style={styles.btn} >
+            <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('GeraPass')} >
                 <Text style={styles.text}>GO</Text>
             </TouchableOpacity>
+            <StatusBar style="light" />
 
            
         </View>
