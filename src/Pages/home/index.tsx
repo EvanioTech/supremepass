@@ -1,11 +1,18 @@
 import React from 'react';
 import { View, Text, StyleSheet, ImageBackground, Image, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, NavigationProp} from '@react-navigation/native';
+
+// Define the RootStackParamList type
+type RootStackParamList = {
+    Home: undefined;
+    GeraPass: undefined;
+};
 
 
 const Home = () => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+    
     return (
         <View style={styles.container}>
             <ImageBackground
