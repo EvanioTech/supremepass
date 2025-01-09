@@ -22,7 +22,7 @@ const GeraPass = () => {
 
     const copy = async () => {
         await Clipboard.setStringAsync(pass);
-        alert('Password copied to clipboard');
+        alert('Password copied!');
     };
     return (
         <View style={styles.container}>
