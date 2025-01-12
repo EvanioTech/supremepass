@@ -1,6 +1,5 @@
 
 import { StyleSheet, Text, View } from 'react-native';
-import { Home } from './src/Pages/home';
 import { Routes } from './src/routes';
 
 export default function App() {
